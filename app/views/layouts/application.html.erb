@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bien Reviews</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+      <%= link_to root_path do %> 
+        <%= image_tag "bien-logo.svg" %>
+        <% end %>
+        </h1>
+      <h2>The best restaurants in the world</h2>
+      <nav>
+        <%= link_to "Add a review", new_review_path %>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>
+      Copyright 2024 Bien Reviews
+    </footer>
+  </body>
+</html>
